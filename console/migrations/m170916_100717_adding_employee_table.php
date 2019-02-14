@@ -29,7 +29,7 @@ class m170916_100717_adding_employee_table extends Migration
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);      
 
 --
 -- AUTO_INCREMENT for dumped tables

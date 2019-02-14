@@ -114,3 +114,14 @@ environments/            contains environment-based overrides
 [![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
 [![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
 [![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+
+
+###---------yii2 Test-------------
+$ ./vendor/bin/phpunit backend/
+PHPUnit 5.7.21-17-g4eba33748 by Sebastian Bergmann and contributors.
+
+
+
+Time: 335 ms, Memory: 2.00MB
+
+No tests executed!

@@ -148,7 +148,7 @@ CREATE TABLE `ProductCategory`
 (
  `ProductCategoryId`      int NOT NULL AUTO_INCREMENT ,
  `ProductCategoryName`    varchar(50) NOT NULL ,
- `ParentCategoryId`     int NOT NULL ,
+ `ProductId`     int NOT NULL ,
  PRIMARY KEY (`ProductCategoryId`),
  KEY `FK_ProductCategory_ProductId_Product` (`ProductId`),
  CONSTRAINT `FK_ProductCategory_ProductId_Product` FOREIGN KEY `FK_ProductCategory_ProductId_Product` (`ProductId`) REFERENCES `Product` (`ProductId`)

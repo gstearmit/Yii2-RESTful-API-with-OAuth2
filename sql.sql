@@ -110,7 +110,9 @@ CREATE TABLE `OrderDetailDelivery`
  KEY `FK_OrderDetailDelivery_OrderId_Order` (`OrderId`),
  CONSTRAINT `FK_OrderDetailDelivery_OrderId_Order` FOREIGN KEY `FK_OrderDetailDelivery_OrderId_Order` (`OrderId`) REFERENCES `Order` (`OrderId`),
  KEY `FK_OrderDetailDelivery_OrderItemId_OrderItem` (`OrderItemId`),
- CONSTRAINT `FK_OrderItem_ProductId_Product` FOREIGN KEY `FK_OrderItem_ProductId_Product` (`OrderItemId`) REFERENCES `OrderItem` (`OrderItemId`)
+ CONSTRAINT `FK_OrderItem_ProductId_Product` FOREIGN KEY `FK_OrderItem_ProductId_Product` (`OrderItemId`) REFERENCES `OrderItem` (`OrderItemId`),
+ KEY `FK_OrderDetailDelivery_DeliveryId_Delivery` (`DeliveryId`),
+ CONSTRAINT `FK_OrderDetailDelivery_DeliveryId_Delivery` FOREIGN KEY `FK_OrderDetailDelivery_DeliveryId_Delivery` (`DeliveryId`) REFERENCES `Delivery` (`DeliveryId`)
 )AUTO_INCREMENT=1 COMMENT='Basic information about OrderDetailDelivery';
 
 

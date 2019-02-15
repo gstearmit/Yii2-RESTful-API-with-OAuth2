@@ -125,3 +125,75 @@ PHPUnit 5.7.21-17-g4eba33748 by Sebastian Bergmann and contributors.
 Time: 335 ms, Memory: 2.00MB
 
 No tests executed!
+
+
+### ----------Gii---------
+http://hostname/index.php?r=gii
+http://yii2-rest.back-end.local.vn/gii
+
+###---------migrate-------------
+ ./yii migrate/create order 
+Yii Migration Tool (based on Yii v2.0.13-dev)
+
+Create new migration '/Applications/XAMPP/xamppfiles/htdocs/yii2-rest/console/migrations/m190214_073422_order.php'? (yes|no) [no]:yes
+New migration created successfully.
+
+###---------Fake data----------
+https://subscription.packtpub.com/book/web_development/9781785281761/7/ch07lvl1sec78/pjax-jquery-plugin
+https://stackoverflow.com/questions/38431005/how-to-yii2-faker-database-relation
+
+###------POST authorize----------
+        curl -X POST \
+                http://yii2-rest.back-end.local.vn/1/authorize \
+              -H 'content-type: application/json' \
+              -d '{
+              "username":"gstearmit",
+              "password":"ngoc875052"
+            }'
+      ---> Reponse
+      {
+          "status": 1,
+          "data": {
+              "authorization_code": "0367d013707b7a1d716500d7487381ce",
+              "expires_at": 1550136755
+          }
+      }      
+ 
+###------POST accesstoken----------
+           
+      curl -X POST \
+          http://yii2-rest.back-end.local.vn/1/accesstoken \
+      -H 'content-type: application/json' \
+      -d '{
+            "authorization_code": "0367d013707b7a1d716500d7487381ce"
+         }' 
+         
+       ---> Reponse
+       
+       {
+           "status": 1,
+           "data": {
+               "access_token": "95b45bb33a39a25a12c696f1515ec506",
+               "expires_at": 1555320752
+           }
+       }
+                   
+###------Get me----------
+    
+      curl -X GET \
+     -H "X-Access-Token: 95b45bb33a39a25a12c696f1515ec506" \
+     -G  'http://yii2-rest.back-end.local.vn/1/me'   
+     
+     ---> Reponse
+     
+     {
+         "status": 1,
+         "data": {
+             "id": 2,
+             "username": "gstearmit",
+             "email": "gstearmit@gmail.com",
+             "status": 10,
+             "created_at": 1550128415,
+             "updated_at": 1550128415
+         }
+     } 
